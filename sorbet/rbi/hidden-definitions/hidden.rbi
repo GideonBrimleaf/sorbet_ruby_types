@@ -4592,6 +4592,11 @@ end
 RSpec::Core::Example::AllExceptionsExcludingDangerousOnesOnRubiesThatAllowIt = RSpec::Support::AllExceptionsExceptOnesWeMustNotRescue
 
 class RSpec::Core::ExampleGroup
+  include ::RSpec::Core::MockingAdapters::RSpec
+  include ::RSpec::Mocks::ExampleMethods
+  include ::RSpec::Mocks::ArgumentMatchers
+  include ::RSpec::Mocks::ExampleMethods::ExpectHost
+  include ::RSpec::Matchers
   INSTANCE_VARIABLE_TO_IGNORE = ::T.let(nil, ::T.untyped)
 end
 
@@ -4681,6 +4686,10 @@ end
 
 RSpec::Expectations::LegacyMacherAdapter = RSpec::Expectations::LegacyMatcherAdapter
 
+class RSpec::Expectations::MultipleExpectationsNotMetError
+  include ::RSpec::Core::MultipleExceptionError::InterfaceTag
+end
+
 module RSpec::Expectations::Version
   STRING = ::T.let(nil, ::T.untyped)
 end
@@ -4746,22 +4755,6 @@ end
 
 class RSpec::Mocks::ArgumentListMatcher
   MATCH_ALL = ::T.let(nil, ::T.untyped)
-end
-
-class RSpec::Mocks::ArgumentMatchers::AnyArgMatcher
-  INSTANCE = ::T.let(nil, ::T.untyped)
-end
-
-class RSpec::Mocks::ArgumentMatchers::AnyArgsMatcher
-  INSTANCE = ::T.let(nil, ::T.untyped)
-end
-
-class RSpec::Mocks::ArgumentMatchers::BooleanMatcher
-  INSTANCE = ::T.let(nil, ::T.untyped)
-end
-
-class RSpec::Mocks::ArgumentMatchers::NoArgsMatcher
-  INSTANCE = ::T.let(nil, ::T.untyped)
 end
 
 class RSpec::Mocks::Matchers::HaveReceived
