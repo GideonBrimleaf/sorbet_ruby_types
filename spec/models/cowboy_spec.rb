@@ -1,6 +1,7 @@
+# typed: false
 # frozen_string_literal: true
 
-require_relative '../src/cowboy'
+require_relative '../../src/models/cowboy'
 
 describe Cowboy do
   it 'has a name and a weapon' do
