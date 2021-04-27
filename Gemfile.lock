@@ -37,10 +37,10 @@ GEM
       rubocop (~> 1.0)
       rubocop-ast (>= 1.1.0)
     ruby-progressbar (1.11.0)
-    sorbet (0.5.6389)
-      sorbet-static (= 0.5.6389)
-    sorbet-runtime (0.5.6389)
-    sorbet-static (0.5.6389-universal-darwin-19)
+    sorbet (0.5.6391)
+      sorbet-static (= 0.5.6391)
+    sorbet-runtime (0.5.6391)
+    sorbet-static (0.5.6391-universal-darwin-19)
     unicode-display_width (2.0.0)
 
 PLATFORMS

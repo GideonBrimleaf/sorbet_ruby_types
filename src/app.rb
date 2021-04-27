@@ -1,4 +1,4 @@
-# typed: true
+# typed: strict
 # frozen_string_literal: true
 
 jessie_james = Cowboy.new('Jessie James', 'Winchester Rifle')
